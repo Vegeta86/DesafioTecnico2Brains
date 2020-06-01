@@ -2,6 +2,7 @@ import { LoginService } from '../services/login-service.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   public validBtn: boolean ;
 
   // tslint:disable-next-line: max-line-length
-  constructor(private loginService: LoginService, private router: Router) {
+  constructor(private loginService: LoginService, private router: Router, public loadingController: LoadingController) {
     this.email = new FormControl('', [Validators.required, Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.com')]);
     this.password = new FormControl('', [Validators.required]);
   }
@@ -45,6 +46,11 @@ export class LoginComponent implements OnInit {
 
   LogIn() {
     if (this.loginForm.valid) {
+      this.loadingController.create({
+        message: 'Verficando credenciales...',
+       }).then(res => {
+        res.present();
+       });
       this.loginService.LogIn(this.email.value, this.password.value);
     }
   }

@@ -2,24 +2,26 @@
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { ToastController, LoadingController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor(private afAuth: AngularFireAuth, private router: Router, public toastController: ToastController) {
+  // tslint:disable-next-line: max-line-length
+  constructor(private afAuth: AngularFireAuth, private router: Router, public toastController: ToastController, public loadingController: LoadingController) {
   }
 
   LogIn(email, password) {
+
     return this.afAuth.signInWithEmailAndPassword(email, password).then(res => {
       localStorage.setItem('sid', res.user.uid);
-      this.router.navigate(['users']);
+      this.loadingController.dismiss(); // elimina la animacion de espera
+      this.router.navigate(['users']); // si el login es exitoso redirige a la pagina usuarios
     }).catch((error) => {
-      console.log(error);
 
-      // instaciacion y configuracion del toast controller cuando el usuario o pass son invalidas //
+      // creacion y configuracion del toast controller cuando el usuario o pass son invalidas //
       this.toastController.create({
         message: 'Usario y/o Contraseña invalida',
         duration: 3000,
@@ -36,6 +38,7 @@ export class LoginService {
     localStorage.clear();
     this.router.navigate(['login']);
   }
+
 
   isAuthenticated(): boolean {
     if (localStorage.getItem('sid') != null) {
