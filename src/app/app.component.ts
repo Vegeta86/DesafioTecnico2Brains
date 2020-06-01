@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
+import * as firebase from 'firebase';
+
+
 
 @Component({
   selector: 'app-root',
@@ -8,3 +11,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'DesafioTecnico2Brains';
 }
+
+
+

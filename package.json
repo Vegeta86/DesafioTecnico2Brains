@@ -3,11 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "lite": "lite-server",
+    "postinstall": "ng build --prod"
+
   },
   "private": true,
   "dependencies": {
@@ -15,13 +18,22 @@
     "@angular/common": "~8.2.14",
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
+    "@angular/fire": "^6.0.0",
     "@angular/forms": "~8.2.14",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@ionic/angular": "^5.1.1",
+    "express": "^4.17.1",
+    "firebase": "^7.14.5",
+    "path": "^0.12.7",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "@angular-devkit/build-angular": "~0.803.25",
+    "@angular/cli": "~8.3.26",
+    "@angular/compiler-cli": "~8.2.14",
+    "typescript": "~3.5.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.25",
@@ -42,6 +54,11 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "@ionic/angular-toolkit": "latest"
+  },
+  "engines": {
+    "node": "10.14.2",
+      "npm": "6.4.1"
   }
 }
