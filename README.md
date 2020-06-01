@@ -10,6 +10,7 @@ correr `ng serve` y acceder a  `http://localhost:4200/`.
 
 correr los siguientes comandos:
 
+- npm install -g angular-cli-ghpages (instala las librerias necesarias para desplegar la aplicacion en github pages)
 - ng build --prod
 - ngh --no-silent --dir=DesafioTecnico2Brains (el flag --no-silent permite visualizar errores en el despliegue a github en caso de ocurrir)
 
