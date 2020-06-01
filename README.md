@@ -2,7 +2,7 @@
 
 Creado con angular 8 y Ionic 4
 
-##  server desarrollo
+##  Server desarrollo
 
 correr `ng serve` y acceder a  `http://localhost:4200/`.
 
