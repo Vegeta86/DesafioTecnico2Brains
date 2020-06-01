@@ -1,18 +1,25 @@
 # DesafioTecnico2Brains
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.26.
+Creado con angular 8 y Ionic 4
 
-## Development server
+##  server desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+correr `ng serve` y acceder a  `http://localhost:4200/`.
 
-## Code scaffolding
+## Despligue productivo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+correr los siguientes comandos:
 
-## Build
+ng build --prod
+ngh --no-silent --dir=DesafioTecnico2Brains (el flag --no-silent permite visualizar errores en el despliegue a github en caso de ocurrir)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+el despliegue se produce en forma automatica desde la rama gh-pages
+en la direccion : https://vegeta86.github.io/DesafioTecnico2Brains
+
+
+Nota: intente realizar el despliegue en Heroku pero la cuenta gratuita tiene intentos limitados de depliegue,
+intente realizar el despligue en Amazon pero este me pedia una tarjeta de credito (la cual no tengo :/ )al crear la cuenta.
+
 
 ## Running unit tests
 
@@ -21,7 +28,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
