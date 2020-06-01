@@ -1,0 +1,45 @@
+
+
+<ion-content >
+
+
+    <ion-header >
+        <ion-toolbar color="medium" class="NavBar" >
+            <ion-title slot="start">Lista de usuarios</ion-title>
+            <ion-buttons slot="end">
+                <ion-button (click)="LogOut()" fill=outline color="warning">Cerrar sesion</ion-button>
+            </ion-buttons>
+        </ion-toolbar>
+    </ion-header>
+
+    <ion-infinite-scroll class="usersBox">
+        <ion-infinite-scroll-content loadingSpinner=null>
+            <ion-card *ngFor="let user of userList; let i = index" class="cardDetailShow">
+
+                <ion-card-content>
+                    <ion-item lines="none">
+                        <ion-avatar><img src="{{user.picture.thumbnail}}"></ion-avatar>
+                        <ion-title>{{user.name.first+" "+user.name.last}}</ion-title>
+                    </ion-item>
+                    <ion-item lines=none>
+                        <ion-button *ngIf="i !== showDetails" fill=outline (click)="ShowDetails(i)">Mostrar detalle</ion-button>
+                        <ion-button *ngIf="i === showDetails" fill=outline (click)="HideDetails(i)">Ocultar detalle</ion-button>
+                    </ion-item>
+                    <ion-item lines=none *ngIf="i === showDetails" [ngClass]="i === showDetails ? 'cardDetailShow':'cardDetailHide'">
+                        <detalle-usuario 
+                        [gender]="user.gender" 
+                        [cell]="user.cell" 
+                        [phone]="user.phone"
+                        [email]="user.email">
+                    </detalle-usuario>
+                    </ion-item>
+
+                </ion-card-content>
+            </ion-card>
+
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+ 
+
+</ion-content>
+

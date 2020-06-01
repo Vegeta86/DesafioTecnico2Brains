@@ -1,0 +1,24 @@
+<ion-toolbar color="medium" class="NavBar"></ion-toolbar>
+
+<div class="loginBox">
+    <form [formGroup]="loginForm">
+        <h1>Inicio de sesión</h1>
+        <br><br>
+
+        <ion-input class="ion-input" formControlName="email" placeholder="Email"></ion-input>
+        <div class="invalidFieldText">
+            <span *ngIf="loginForm.get('email').hasError('pattern') && loginForm.get('email').dirty && loginForm.get('email')">Debe ingresar un email valido</span>
+            <span *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').dirty">Debe ingresar un email</span>
+        </div>
+
+        <br>
+        <ion-input class="ion-input" type="password" formControlName="password" placeholder="Password"></ion-input>
+        <span class="invalidFieldText" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').dirty">Debe ingresar su contraseña</span>
+
+        <br><br>
+      
+            <ion-button  *ngIf="validBtn" (click)="LogIn()" expand=block size=small>Ingresar</ion-button>
+            <ion-button  *ngIf="!validBtn" (click)="LogIn()" expand=block size=small disabled>Ingresar</ion-button>
+            
+    </form>
+</div>
