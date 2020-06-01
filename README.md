@@ -1,6 +1,8 @@
-# DesafioTecnico2Brains
+# Desafio Tecnico 2Brains
 
 Creado con angular 8 y Ionic 4
+Desarrollador : Javier Rivera C
+Email: jriveracav@gmail.com
 
 ##  Server desarrollo
 
