@@ -6,17 +6,17 @@ Creado con angular 8 y Ionic 4
 
 ##  Server desarrollo
 
-- ejecutar `ng serve` y acceder a  `http://localhost:4200/`.
+- Ejecutar `ng serve` y acceder a  `http://localhost:4200/`.
 
 ## Despligue productivo
 
-- ejecutar los siguientes comandos en ambiente local:
+- Ejecutar los siguientes comandos en ambiente local:
 
 - npm install -g angular-cli-ghpages (instala las librerias necesarias para desplegar la aplicacion en github pages)
 - ng build --prod
 - ngh --no-silent --dir=DesafioTecnico2Brains (el flag --no-silent permite visualizar errores en el despliegue a github en caso de ocurrir)
 
-- el despliegue se produce en forma automatica desde la rama gh-pages
+- El despliegue se produce en forma automatica desde la rama gh-pages
 en la direccion : https://vegeta86.github.io/DesafioTecnico2Brains
 
 
