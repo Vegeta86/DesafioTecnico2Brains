@@ -8,7 +8,7 @@ correr `ng serve` y acceder a  `http://localhost:4200/`.
 
 ## Despligue productivo
 
-correr los siguientes comandos:
+correr los siguientes comandos en ambiente local:
 
 - npm install -g angular-cli-ghpages (instala las librerias necesarias para desplegar la aplicacion en github pages)
 - ng build --prod
