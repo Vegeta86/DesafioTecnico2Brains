@@ -23,7 +23,7 @@
                     </ion-item>
                     <ion-item lines=none>
                         <ion-button *ngIf="i !== showDetails" fill=outline (click)="ShowDetails(i)">Mostrar detalle</ion-button>
-                        <ion-button *ngIf="i === showDetails" fill=outline (click)="HideDetails(i)">Ocultar detalle</ion-button>
+                        <ion-button *ngIf="i === showDetails" fill=outline (click)="HideDetails()">Ocultar detalle</ion-button>
                     </ion-item>
                     <ion-item lines=none *ngIf="i === showDetails" [ngClass]="i === showDetails ? 'cardDetailShow':'cardDetailHide'">
                         <detalle-usuario 
