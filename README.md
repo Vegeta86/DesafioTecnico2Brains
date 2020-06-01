@@ -10,8 +10,8 @@ correr `ng serve` y acceder a  `http://localhost:4200/`.
 
 correr los siguientes comandos:
 
-ng build --prod
-ngh --no-silent --dir=DesafioTecnico2Brains (el flag --no-silent permite visualizar errores en el despliegue a github en caso de ocurrir)
+- ng build --prod
+- ngh --no-silent --dir=DesafioTecnico2Brains (el flag --no-silent permite visualizar errores en el despliegue a github en caso de ocurrir)
 
 el despliegue se produce en forma automatica desde la rama gh-pages
 en la direccion : https://vegeta86.github.io/DesafioTecnico2Brains
